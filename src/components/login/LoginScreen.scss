@@ -1,0 +1,179 @@
+//  Colores
+$base-bg: #F8F8FB, 100;
+$dark_cyan: #51AAC5; 
+$light_cyan: #5BDAF3;
+$dark_blue: #135EBB;
+$light_blue: #479FF8;
+
+$dark_grey_text: #74788D;
+$light_grey: #E5E8ED;
+$steps_primary_blue: #155D97;
+
+$break_point:500px;
+
+.background{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: url(../../assets/fondos/fondo-iconos.svg) no-repeat center center, url(../../assets/fondos/fondo.jpg) no-repeat center center;
+    background-size: contain, 100%;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $break_point) {
+        // position: absolute;
+        // width: 0;
+        // height: 0;
+    }
+}
+
+.login-card{
+    font-family: Poppins;
+    position: relative;
+    box-sizing: border-box;
+    width: 415px;
+    height: 540px;
+    padding: 2.3% 4%;
+    background-color: white;
+    border-radius: 0.5rem;
+    @media (max-width: $break_point) {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .image-container{
+        width: 10rem;
+        margin: 0 auto;
+        padding-top: 1%;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.singup-message{
+    font-size: 0.8rem;
+    padding: 0 2rem;
+    font-weight: 400;
+    color:$dark_grey_text;
+    text-align: center;
+    margin-bottom: 1%;
+    margin-top: 1.6%;
+}
+
+.steps{
+    margin-top: 1.3%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    .step-active{
+        height: 0.3rem;
+        width: 2.2rem;
+        background-color: $steps_primary_blue;
+        margin: 0.1em 0.3em 0 0.3em;
+        border-radius: 50px;
+    }
+    .step-inactive{
+        height: 0.3rem;
+        width: 2.2rem;
+        background-color: $light_grey;
+        margin: 0.1em 0.3em 0 0.3em;
+        border-radius: 50px;
+    }
+    .step-3{
+        @media (max-width: $break_point) {
+            visibility: hidden;
+            position: absolute;
+        }
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    label{
+        font-size: 0.7rem;
+        margin-top: 1.2rem;
+
+    }
+    input{
+        opacity: 0.4;
+        font-size: 0.7rem;
+        color: $light_grey;
+        height: 2rem;
+        padding-left: 0.7rem;
+        border: solid $light_grey;
+        border-radius: 0.2rem;
+    }
+}
+
+.terms{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1em;
+    a{
+        color: $steps_primary_blue;
+        text-decoration: none;
+    }
+    input{
+        margin: 0;
+        background-color: #fafafa;
+        border: none;
+        height: 20px;
+        width: 20px;
+        border-radius: 2px;
+        display: block;
+    }
+    label{
+        font-size: 0.7rem;
+        margin: 0px 0.8rem;
+    }
+}
+
+.next-button{
+    background: linear-gradient(270deg, $dark_blue 4.67%, $light_blue 100%);
+    border-radius: 10rem;
+    border: none;
+    height: 2.3rem;
+    color: white;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+}
+.alr-acc{
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+    a{
+        color: $steps_primary_blue;
+        text-decoration: none;
+    }
+}
+
+
+
+// .card{
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     height: 100%;
+//     p{
+//         margin-top: 24px;
+//         margin-bottom: 12px;
+//         text-align: center;
+//     }
+//     .steps{
+//         display: flex;
+//         flex-direction: row;        
+//         justify-content: center;
+//         border: red;
+//         span{
+
+//         }
+//     }
+// }
