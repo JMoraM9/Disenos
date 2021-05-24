@@ -10,6 +10,10 @@ $steps_primary_blue: #155D97;
 
 $break_point:500px;
 
+
+body{
+    background-color: $light_grey;
+}
 .nav-container{
     display: flex;
     flex-direction: row;
@@ -17,12 +21,16 @@ $break_point:500px;
     justify-content: space-between;
     padding: 0.5rem 2rem;
     background-color: white;
+    height: 4rem;
     a{
         text-decoration: none;
         color: $steps_primary_blue;
     }
     .hamburguer{
         display: none;
+    }
+    .logo{
+        height: 80%;
     }
     .navbar{
         display: flex;
@@ -39,6 +47,8 @@ $break_point:500px;
             background-color: $light_grey;
             width: 0.2rem;
             border-radius: 200px;
+            margin: auto 1rem;
+            height: 3rem;
         }
         .user-info{
             display: flex;
