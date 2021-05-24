@@ -1,0 +1,57 @@
+//  Colores
+$base-bg: #F8F8FB, 100;
+$dark_cyan: #51AAC5; 
+$light_cyan: #5BDAF3;
+$dark_blue: #135EBB;
+$light_blue: #479FF8;
+
+$dark_grey_text: #74788D;
+$light_grey: #E5E8ED;
+$steps_primary_blue: #155D97;
+
+.load-bg{
+    width: 100%;
+    height: 100vh;
+    background: $steps_primary_blue;
+    text-align: center;
+    img{
+        height: 120px;
+        margin-top: 18rem;
+    }
+    .dots-container{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .dot{
+            display: inline-block; 
+            background-color: white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            margin: 12px;
+            margin-top: 15px;
+            animation: scaling 2.5s ease-in-out infinite;
+        }
+        @keyframes scaling {
+            0%, 100%{
+                transform: scale(0.2);
+            }
+            60%{
+                transform: scale(1);
+            }
+        }
+        div:nth-child(1){
+            animation-delay: 0s;
+        }
+        div:nth-child(2){
+            animation-delay: 0.2s;
+        }
+        div:nth-child(3){
+            animation-delay: 0.4s;
+        }
+        div:nth-child(4){
+            animation-delay: 0.6s;
+        }
+    }
+}

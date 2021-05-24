@@ -4,7 +4,9 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import { Grax } from '../components/gracias/Grax';
+import { Inicio } from '../components/inicio/Inicio';
+import { Loading } from '../components/loading/Loading';
+// import { Grax } from '../components/gracias/Grax';
 import { LoginScreen } from '../components/login/LoginScreen';
 
 export const AppRouter = () => {
@@ -13,8 +15,9 @@ export const AppRouter = () => {
             <>
                 <Switch>
                     <Route exact path="/login" component = { LoginScreen } />
-
-                    <Route path="/" component = { Grax } />
+                    <Route exact path="/login/second" component = { LoginScreen } />
+                    <Route exact path="/load" component = { Loading } />
+                    <Route exact path="/inicio"component = { Inicio } />
                 </Switch>
             </>                        
         </Router>

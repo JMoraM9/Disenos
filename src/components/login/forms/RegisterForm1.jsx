@@ -1,7 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export const RegisterForm = () => {
+export const RegisterForm1 = () => {
     return (
+        <> 
+        <div className="steps">
+            <span className="step-active"></span>
+            <span className="step-inactive"></span>
+            <span className="step-inactive step-3"></span>
+        </div>
         <form>
             <label htmlFor="email">Correo</label>
             <input type="email" name="email" id="email" placeholder="Ingrese su correo"/>
@@ -11,11 +18,14 @@ export const RegisterForm = () => {
             <input type="password" name="confpass" id="confpass" placeholder="Confirme su contraseña"/>
             <div className="terms">
                 <input type="checkbox" name="terms" id="terms" />
-                <label htmlFor="terms">Confirmo que acepto los <a href="#">Términos y Condiciones</a></label>
+                <label htmlFor="terms">Confirmo que acepto los <a href="/#">Términos y Condiciones</a></label>
             </div>
             
-            <button className="next-button">Siguiente</button>
-            <p className="alr-acc">¿Ya tiene una cuenta? <a href="#">Inicie sesión</a></p>
+            
+            <Link to="/login/second" className="next-button">
+            Siguiente
+            </Link>
         </form>
+        </>
     )
 }
