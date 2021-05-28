@@ -8,7 +8,7 @@ label{
 }
 
 
-.id{
+.id, .tel{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -20,12 +20,15 @@ label{
         position: relative;
         display: flex;
         flex-direction: row;
-        select{
         height: 2rem;
+        select{
+        height: 100%;
         // width: 4.5rem;
         margin-right: 1rem;
+        margin-top: 0.2rem;
     }
         input{
+            margin: 0;
             width: 100%;
             opacity: 0.4;
             font-size: 0.7rem;

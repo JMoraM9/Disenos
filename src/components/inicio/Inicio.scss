@@ -1,0 +1,119 @@
+$base-bg: #F8F8FB, 100;
+$dark_cyan: #51AAC5; 
+$light_cyan: #5BDAF3;
+$dark_blue: #135EBB;
+$light_blue: #479FF8;
+
+$dark_grey_text: #74788D;
+$light_grey: #E5E8ED;
+$steps_primary_blue: #155D97;
+$dark_grey_btn: #FAFBFC;
+
+$break_point:500px;
+// font-family: Poppins;
+
+body{
+    background-color: $base-bg;
+    ;
+    font-family: Poppins;
+}
+
+.cards-container{
+    margin: 3rem 13rem;
+    .main-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .card{
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 0.5rem;
+            width:49%;
+            height: 150px;
+            padding: 13px 20px;
+            box-shadow: 0 0 4px $dark_grey_text;
+        }
+        .saludo{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .text{
+                h3{
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
+                .id-title{
+                    font-weight: 400;
+                    font-size: 1rem;
+                    margin-top: 15px;
+                    margin-bottom: 5px;
+                }
+                .id-number{
+                    color: $dark_grey_text
+                }
+            }
+            .image{
+                text-align: center;
+                padding-top: 0.5rem;
+                img{
+                    height: 90%;
+                }
+            }
+        }
+        .facturacion{
+            h3{
+                font-size: 1.5rem;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+            .buttons-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                .btn{
+                    color: $steps_primary_blue;
+                    font-weight: 600;
+                    display: flex;
+                    background: linear-gradient(270deg, $light_grey 0%, $dark_grey_btn 100%);
+                    border-radius: 0.5rem;
+                    width: 48%;
+                    height: 3.5rem;
+                    justify-content: flex-start;
+                    align-items: center;
+                    img{
+                        margin: 0 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $break_point) {
+    .cards-container{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 1rem;
+        .main-info{
+            width: 100%;
+            justify-content: end;
+            flex-direction: column;
+            .card{
+                width: 100%;
+                margin: 0.8rem 0;
+            }
+            .facturacion{
+                height: fit-content;
+                .buttons-container{
+                    flex-direction: column;
+                    .btn{
+                        width: 100%;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

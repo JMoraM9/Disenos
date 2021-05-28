@@ -11,10 +11,8 @@ $steps_primary_blue: #155D97;
 $break_point:500px;
 
 
-body{
-    background-color: $light_grey;
-}
 .nav-container{
+    background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,6 +20,7 @@ body{
     padding: 0.5rem 2rem;
     background-color: white;
     height: 4rem;
+    box-shadow: 0 3px 8px $dark_grey_text;
     a{
         text-decoration: none;
         color: $steps_primary_blue;
@@ -29,8 +28,12 @@ body{
     .hamburguer{
         display: none;
     }
-    .logo{
-        height: 80%;
+    .logo-container{
+        .logo{
+            // height: 10%;
+            width: 80%;
+            margin-left: 1.2rem;
+        }
     }
     .navbar{
         display: flex;
@@ -73,7 +76,7 @@ body{
         background-color: $light_grey;
     }
     .nav-container{
-        padding: 0.5rem 0.5rem;
+        padding: 0 0.5rem;
         .hamburguer{
             display: block;
             background-color: transparent;

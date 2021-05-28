@@ -1,0 +1,28 @@
+$steps_primary_blue: #155D97;
+
+.avatar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    .thumbnail{
+        img{
+            margin-right: 0.5rem;
+        }
+    }
+    .text{
+        h4{
+            // font-size: 18px;
+            margin: 0;
+            font-weight: 600;
+        }
+        // text-align: justify;
+        span{
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 0px;
+
+        }
+    }
+}

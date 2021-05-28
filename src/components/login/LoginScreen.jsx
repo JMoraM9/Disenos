@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './LoginScreen.scss';
 import { RegisterForm1 } from './forms/RegisterForm1';
 import { RegisterForm2 } from './forms/RegisterForm2';
+import { RegisterForm3 } from './forms/RegisterForm3';
 
 export const LoginScreen = () => {
     
@@ -12,10 +13,12 @@ export const LoginScreen = () => {
 
     const form = ( paths ) => {
 
-        if (paths[paths.length-1] === 'login') {
+        if (paths[paths.length-1] === 'login' || paths[paths.length-1] === '') {
             return <RegisterForm1 />
         } else if (paths[paths.length-1] === 'second') {
             return <RegisterForm2 />
+        } else if (paths[paths.length-1] === 'third'){
+            return <RegisterForm3 />
         }
     }
 
@@ -30,7 +33,7 @@ export const LoginScreen = () => {
                 {
                     form( paths )
                 }
-                <p className="alr-acc">¿Ya tiene una cuenta? <a href="#">Inicie sesión</a></p>
+                <p className="alr-acc">¿Ya tiene una cuenta? <a href="/#">Inicie sesión</a></p>
             </div>
         </div>
     )

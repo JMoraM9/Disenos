@@ -24,11 +24,11 @@ export const RegisterForm2 = () => {
                     </select>
                     <input type="number" name="id" id="id" placeholder="Número de documento"/>
                 </div>
+            </div>
             <Link to="/login/third" className="next-button">
             Siguiente
             </Link>
             <a href="/#" className="skip">Omitir paso</a>
-            </div>
         </form>
         </>
     )
